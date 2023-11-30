@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="modal">
+        <h1 class="modal__title">Обратная связь</h1>
+        <div class="modal__body">
+          <form class="form">
+            <div class="form__content">
+              <label class="form__label">
+                <span>ФИО</span>
+                <input
+                  required
+                  class="form__input"
+                  type="text"
+                  name="fio"
+                  placeholder="ФИО"
+                />
+              </label>
+              <label class="form__label">
+                <span>Телефон</span>
+                <input
+                  required
+                  class="form__input"
+                  type="tel"
+                  pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+                  name="phone"
+                  placeholder="+7 (999) 999-99-99"
+                />
+              </label>
+              <label class="form__label">
+                <span>Email</span>
+                <input
+                  class="form__input"
+                  type="email"
+                  pattern="^\S+@\S+\.\S+$"
+                  name="email"
+                  placeholder="email@mail.ru"
+                />
+              </label>
+            </div>
+
+            <label class="form__label">
+              <span>Сообщение</span>
+              <textarea class="form__textarea" name="message"></textarea>
+            </label>
+            <p class="form__agreement">
+              Отправляя форму, Вы соглашаетесь на
+              <a href="/" target="_blank">обработку персональных данных</a>
+            </p>
+            <button class="form__submit" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="thanks" style="display:none">
+        <p class="thanks__text">Спасибо за обратную связь!</р>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

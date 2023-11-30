@@ -1,0 +1,127 @@
+@import "_variables";
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.modal, .thanks {
+  width: 598px;
+  height: 559px;
+  background-color: var(--white);
+  padding: 46px 56px 42px;
+}
+
+.modal {
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: var(--black);
+  }
+
+  // &__body {}
+}
+
+.form {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 33px 21px;
+    margin-bottom: 33px;
+  }
+
+  &__label {
+    position: relative;
+
+    & span {
+      position: absolute;
+      transform: translateY(-50%);
+      left: 12px;
+      color: var(--gray);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      padding: 0 2px;
+      background-color: var(--white);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 14px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+    font-size: 16px;
+    line-height: 24px;
+
+    &:focus {
+      outline: 1px solid var(--green);
+      border: 1px solid var(--green);
+    }
+  }
+
+  &__textarea {
+    padding: 10px 12px;
+    width: 100%;
+    min-height: 120px !important;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    resize: none;
+
+    &:focus {
+      outline: 1px solid var(--green);
+      border: 1px solid var(--green);
+    }
+  }
+
+  &__agreement {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.5%;
+    text-align: center;
+    cursor: default;
+    margin-bottom: 15px;
+
+    & a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__submit {
+    text-align: center;
+    background-color: var(--green);
+    display: block;
+    margin: 0 auto;
+    padding: 10px 62px;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    transition: opacity 100ms;
+
+    &:hover, &:focus-visible {
+      opacity: 0.8;
+    }
+  }
+}
+
+.thanks {
+  &__text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    padding-top: 70px;
+    color: var(--green);
+  }
+}
